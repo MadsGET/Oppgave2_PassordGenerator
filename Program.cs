@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Oppgave2_PassordGenerator
 {
     class Program
-    {
+    {               
         private static Random random = new Random();
         private static readonly int lowerCaseStart = 97, lowerCaseEnd = 123;
         private static readonly int upperCaseStart = 65, upperCaseEnd = 91;
@@ -23,15 +23,19 @@ namespace Oppgave2_PassordGenerator
 
         static void Main(string[] args)
         {
+
+                Console.WriteLine(GeneratePassword(9, 2, 2, 2, 2));
+
+
             // Check if length and command is valid.
-            if (args.Length == 2 && ValidateCommand(args[0], args[1]))
-            {
-                Console.WriteLine(GeneratePassword(lengthCount, lowercaseCount, uppercaseCount, digitCount, symbolCount));
-            }
-            else 
-            {
-                ThrowError();
-            }
+            //if (args.Length == 2 && ValidateCommand(args[0], args[1]))
+            //{
+            //    Console.WriteLine(GeneratePassword(lengthCount, lowercaseCount, uppercaseCount, digitCount, symbolCount));
+            //}
+            //else
+            //{
+            //    ThrowError();
+            //}
         }
 
         static void ThrowError() 
